@@ -2,7 +2,8 @@ var add = document.querySelector("#add");
 var roll = document.querySelector("#roll");
 var counter = 3;
 
-add.addEventListener("click", function(){
+add.addEventListener("click", function(event){
+    event.preventDefault();
     var form = document.querySelector("#form-content");
     var lastrow = document.querySelector("#last-entry");
     var newRow = document.createElement("div");
@@ -30,7 +31,8 @@ add.addEventListener("click", function(){
     counter = counter + 1;
 });
 
-roll.addEventListener("click", function(){
+roll.addEventListener("click", function(event){
+    event.preventDefault();
     var sum = 0;
     var pokepercList = [];
     for(var i = 1; i < counter; i++){
